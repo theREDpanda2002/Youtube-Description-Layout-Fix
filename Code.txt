@@ -1,0 +1,223 @@
+These are instructions for Google Chrome, I haven't tested any 
+other browswers, but I can see others working with it. 
+
+
+[How To Install]
+
+STEP 1:
+- install stylus, (or any userstyles manager, but this is the one i used) at: 
+https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne
+
+
+STEP 2 (stylus):
+- Navigate to the left side (once on stylus), and click "write new style"
+- Enter a name in the top left
+- under "Code 1", click "Add another section"
+- under "Code 2", where it says "http://example.com", type in "https://www.youtube.com/"
+- under "Code 2", click "Add"
+- Under "Code 3", where it says "http://example.com", type in "https://www.youtube.com/watch?v="
+
+
+STEP 3 (stylus):
+-Paste the following code into the "Code 2" box:
+
+/* ==UserStyle==
+@name           Youtube Description Fixer AIO [2022]
+@namespace      YTDF
+@author         theREDpanda2002
+@description    Finally fixes that AWFUL moble UI looking layout on desktop 
+@version        20220505.0
+==/UserStyle== */
+
+
+STEP 4: (stylus):
+- Paste the following code into the "Code 3" box:
+
+ytd-watch-metadata {
+    display: none;
+    color: var(--yt-spec-text-primary);
+}
+
+[hidden] {
+    display: block !important;
+}
+
+ytd-mini-guide-renderer {
+    display: none !important;
+    background-color: var(--yt-spec-brand-background-solid);
+    z-index: 2028;
+}
+
+ytd-mini-guide-renderer.ytd-app {
+    position: fixed;
+    left: 0;
+    top: var(--ytd-masthead-height,var(--ytd-toolbar-height));
+    bottom: 0;
+    width: var(--ytd-mini-guide-width);
+    display: none !important;
+}
+
+#engagement-panel-scrim.ytd-watch-flexy {
+    display: none !important;
+}
+
+#error-screen.ytd-watch-flexy {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none !important;
+}
+
+ytd-yoodle-renderer.ytd-topbar-logo-renderer {
+    display: none !important;
+}
+
+#playlist.ytd-watch-flexy:not([js-panel-height_]).ytd-watch-flexy:not([disable-upgrade]).ytd-watch-flexy {
+    display: block !important;
+}
+
+ytd-multi-page-menu-renderer[menu-style=multi-page-menu-style-type-system][has-your-data-entry-button] #spinner.ytd-multi-page-menu-renderer {
+    display: none !important;
+}
+
+.ryd-tooltip-bar-container {
+    display: none
+}
+
+#container.ytd-sentiment-bar-renderer {
+    height: 2px;
+    background-color: var(--yt-spec-icon-disabled);
+    width: 135px
+}
+
+.super-title-icon.ytd-video-primary-info-renderer {
+    display: none;
+}
+
+#sentiment.ytd-video-primary-info-renderer {
+    width: 110px !important;
+}
+
+#expander.ytd-comment-replies-renderer {
+    display: none;
+}
+
+ytd-continuation-item-renderer {
+    display: block;
+}
+
+ytd-thumbnail-overlay-time-status-renderer yt-icon.ytd-thumbnail-overlay-time-status-renderer {
+    --iron-icon-height: 0px;
+    --iron-icon-width: 0px;
+    margin-right: 0px;
+}
+
+#contents.ytd-rich-grid-renderer {
+    width: 100%;
+    margin-top: 24px;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: none;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+}
+
+yt-icon.ytd-badge-supported-renderer {
+    width: var(--ytd-badge-icon-size,13px);
+    height: var(--ytd-badge-icon-size);
+    color: var(--ytd-badge-icon-color,var(--yt-spec-text-secondary));
+}
+
+ytd-comment-thread-renderer {
+    display: block;
+    margin-bottom: var(--ytd-comment-thread-margin-bottom,0px);
+}
+
+.guide-icon.ytd-guide-entry-renderer {
+    margin-right: -20px;
+}
+
+ytd-multi-page-menu-renderer[menu-style=multi-page-menu-style-type-comments] #spinner.ytd-multi-page-menu-renderer, ytd-multi-page-menu-renderer[menu-style=multi-page-menu-style-type-notifications] #spinner.ytd-multi-page-menu-renderer {
+    width: 100%;
+    height: 0%;
+    margin: 0px;
+}
+
+#spinner.ytd-multi-page-menu-renderer {
+    max-height: 0px;
+}
+
+#secondary-text.ytd-compact-link-renderer, #right-icon.ytd-compact-link-renderer {
+    margin-left: 8px;
+    display: none !important;
+}
+
+#paid-comment-chip.ytd-comment-renderer {
+    display: none !important;
+}
+
+#vote-count-middle.ytd-comment-action-buttons-renderer {
+    display: block;
+}
+
+#vote-count-left.ytd-comment-action-buttons-renderer {
+    margin-right: 0px;
+    display: none !important;
+}
+
+.channel-owner.ytd-comment-renderer {
+    display: none
+}
+
+#share-button.ytd-comment-action-buttons-renderer {
+    display: none !important;
+}
+
+#author-comment-badge.ytd-comment-renderer, #sponsor-comment-badge.ytd-comment-renderer {
+    padding-right: 0px;
+}
+
+ytd-player-legacy-desktop-watch-ads-renderer {
+    display: none !important;
+}
+
+.yt-spec-icon-badge-shape--type-cart {
+    display: none;
+}
+
+yt-icon-button.ytd-icon-badge-topbar-button-renderer {
+    width: 0px;
+    height: 0px;
+}
+
+ytd-icon-badge-topbar-button-renderer {
+    display: none !important;
+}
+
+#next-label.ytd-playlist-panel-renderer {
+    display: none;
+}
+
+yt-formatted-string[ellipsis-truncate] {
+    display: none;
+}
+
+#chips.yt-chip-cloud-renderer {
+    display: none;
+}
+
+ytd-playlist-panel-renderer[collapsible] .index-message-wrapper.ytd-playlist-panel-renderer {
+    display: none;
+}
+
+
+
+Congrats! You're all set up. Unfortunately, auto updates aren't a thing I can do, so
+check back regularly at the github (https://github.com/theREDpanda2002/Youtube-Description-Layout-Fix)
+for updates. Thanks!
