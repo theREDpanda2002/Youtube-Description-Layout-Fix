@@ -1,13 +1,12 @@
-These are instructions for Google Chrome, I haven't tested any 
-other browswers, but I can see others working with it. 
+These are instructions for Google Chrome & Firefox, I haven't tested any other browswers, but I can see others working with it. 
 
 
 [How To Install]
 
 STEP 1:
 - install stylus, (or any userstyles manager, but this is the one i used) at: 
-https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne
-
+CHROME: https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne
+FIREFOX: https://addons.mozilla.org/en-US/firefox/addon/styl-us/
 
 STEP 2 (stylus):
 - Navigate to the left side (once on stylus), and click "write new style"
